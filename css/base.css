@@ -1,0 +1,144 @@
+@charset "utf-8";
+
+/* ====================================
+   フォント・共通設定
+==================================== */
+body {
+  font-family: "Yu Gothic", "Hiragino Kaku Gothic ProN", sans-serif;
+  margin: 0;
+  padding: 0;
+  color: var(--text-color);
+  background-color: var(--bg-color);
+}
+
+/* ====================================
+   カラーパレット（テーマカラー）
+==================================== */
+:root {
+  --main-color: #305c4d;       /* 深緑（メインカラー） */
+  --accent-color: #a3e4c1;     /* ミントグリーン（アクセント） */
+  --bg-color: #f9f9f9;         /* 背景色：優しい白系 */
+  --text-color: #333;          /* 文字色：ベーシックなグレー */
+}
+
+/* ====================================
+   ヘッダー
+==================================== */
+header {
+  background-color: var(--main-color);
+  color: white;
+  padding: 1rem;
+  text-align: center;
+}
+
+/* ====================================
+   ナビゲーションバー
+==================================== */
+nav {
+  background-color: #333;
+  overflow: hidden;
+}
+
+nav a {
+  float: left;
+  display: block;
+  color: white;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+nav a:hover {
+  background-color: #575757;
+}
+
+/* ====================================
+   メインコンテンツ
+==================================== */
+main {
+  padding: 2rem;
+}
+
+/* ====================================
+   フッター
+==================================== */
+footer {
+  background-color: #f1f1f1;
+  text-align: center;
+  padding: 1rem;
+  position: fixed;
+  width: 100%;
+  bottom: 0;
+}
+.nav-menu {
+    margin-top: 1rem;
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+  }
+  
+  .nav-menu a {
+    color: white;
+    background-color: var(--main-color);
+    padding: 0.5rem 1rem;
+    border-radius: 1rem;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background-color 0.3s;
+  }
+  
+  .nav-menu a:hover {
+    background-color: #2a4c3f;
+  }
+  
+/* ====================================
+   トップセクション（画像＋紹介）
+==================================== */
+.intro-wrap {
+  display: flex;               /* 横並び */
+  align-items: center;         /* 垂直方向中央寄せ */
+  justify-content: center;     /* 水平方向中央寄せ */
+  gap: 2rem;                   /* 画像と文章の間の余白 */
+  padding: 2rem;
+  flex-wrap: wrap;             /* 狭い画面で縦並びに */
+}
+
+.kv {
+  flex: 0 0 auto;              /* 必要なサイズ分だけ幅をとる */
+}
+
+.main-visual {
+  width: 250px;
+  height: auto;
+  object-fit: contain;         /* 縦横比を保って収まるように */
+}
+
+/* ====================================
+   自己紹介文
+==================================== */
+.intro {
+  max-width: 500px;            /* 横幅制限して読みやすく */
+}
+
+/* ====================================
+   SNSリンクボタン
+==================================== */
+.links {
+  margin-top: 1rem;
+}
+
+.btn {
+  display: inline-block;
+  margin-right: 1rem;
+  margin-bottom: 0.5rem;
+  padding: 0.75rem 1.5rem;
+  background: var(--accent-color);
+  color: black;
+  border-radius: 1.5rem;
+  text-decoration: none;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.btn:hover {
+  background: #89d6b1;         /* ホバー時に少し濃くする */
+}
